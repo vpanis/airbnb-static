@@ -2,9 +2,145 @@
 title: Le Wagon Middleman boilerplate
 ---
 
-<div class="welcome text-center padded">
-  <h1>Welcome to Middleman</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
-</div>
+
+
+<div class="banner text-center" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(images/background.jpg);">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12">
+            <h1>WELCOME HOME</h1>
+            <p>Rent unique places to stay from local hosts in 190+ countries.</p>
+          </div>
+
+          <div class="col-xs-12">
+            <button class="btn btn-primary btn-lg">How it works</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Your features code -->
+  <div class="padded">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="feature text-center">
+            <%= image_tag "globe.png" %>
+            <h3>Discover the world</h3>
+            <p>The earth is your home</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="feature text-center">
+            <%= image_tag "dollar.png" %>
+            <h3>Pay online</h3>
+            <p>No cash issues anymore.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="feature text-center">
+            <%= image_tag "beer.png" %>
+            <h3>Meet people</h3>
+            <p>Discover new culture and lifestyle.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="feature text-center">
+            <%= image_tag "heart.png" %>
+            <h3>Share and love</h3>
+            <p>Join a community you will love.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Your cards code -->
+
+    <div class="wrapper-grey padded">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(images/card-paris.jpg);">
+              <%= image_tag "seb.png", class: "img-circle" %>
+              <h3 class="card-city">Paris</h3>
+              <div class="card-description">
+                <h2>Seb's home</h2>
+                <p>Charming room with patio</p>
+              </div>
+              <a href="#" class="card-link"></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(images/card-brussels.jpeg);">
+               <%= image_tag "anne.png", class: "img-circle" %>
+              <h3 class="card-city">Brussels</h3>
+              <div class="card-description">
+                <h2>Anne's home</h2>
+                <p>Lovely house</p>
+              </div>
+              <a href="#" class="card-link"></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(images/card-london.jpeg);">
+               <%= image_tag "romain.png", class: "img-circle" %>
+              <h3 class="card-city">London</h3>
+              <div class="card-description">
+                <h2>Romain's home</h2>
+                <p>Nice flat in Piccadilly</p>
+              </div>
+              <a href="#" class="card-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Your newsletter code -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="newsletter text-center padded">
+            <h2>Get news from us</h2>
+            <label>Leave us your mail and get news from us</label>
+            <form class="form-inline" action="#">
+              <input type="email" value="bob@gmail.com" class="form-control">
+              <input type="submit" value="Subscribe" class="btn btn-primary">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your map code -->
+
+    <div id="map" style="width: 100%; height: 100%;"></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script type="text/javascript">
+      var myLatlng = new google.maps.LatLng(48.8655909, 2.378983);
+
+      var myOptions = {
+        zoom: 16,
+        center: myLatlng,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: []
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), myOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "You are here!"
+      });
+    </script>
+

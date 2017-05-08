@@ -1,0 +1,22 @@
+.banner {
+  height: 100vh;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 50px;
+}
+.wrapper-grey {
+  background: #F4F4F4;
+}
